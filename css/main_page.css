@@ -11,12 +11,14 @@ body{
 /** -------------Nav Panel------------- */
 
 .navbar{
-    background-image: linear-gradient(0deg, rgb(0, 46, 144) 0%, rgb(0, 133, 250) 100%);
+    background-image: linear-gradient(0deg, rgb(1, 59, 185) 0%, rgb(0, 133, 250) 100%);
     text-align: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     top: 0px;
+    display: inline-flex;
+    justify-content: center;
 }
 
 .navbar ul{
@@ -33,7 +35,7 @@ body{
     padding: 20px;
 }
 
-.navbar ul a:hover{
+.navbar a:hover{
     background-color: #056893;
 }
 
@@ -82,6 +84,15 @@ body{
     display: none;
 }
 
+.navbar i {
+    color: #000000;
+    margin-top: 23px;
+}
+
+.navbar li {
+    padding-right: 300px;
+}
+
     /** Animation */
 
 .navbar .menu-btn:checked ~ .menu{
@@ -119,10 +130,14 @@ body{
         padding: 10px 10px;
     }
 
-    .navbar ul a:hover{
+    .navbar a:hover{
         background-color: transparent;
         color: #ffffff;
         text-decoration: underline;
+    }
+
+    .navbar i:hover{
+        color: #ffffff
     }
 
     .navbar .menu{
