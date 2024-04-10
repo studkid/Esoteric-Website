@@ -87,7 +87,7 @@ $items = $statement->fetchAll();
         <meta charset="UTF-8">
         <title>Esoteric Emporium</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main_page.css">
+        <link rel="stylesheet" href="css/product_page.css">
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     </head>
     <body>
@@ -123,7 +123,7 @@ $items = $statement->fetchAll();
         <section id="feature-content">
 
         
-        <table border="1">
+        <table>
         <th> ITEM ID </th>
         <th> NAME </th>
         <th> DESCRIPTION </th>

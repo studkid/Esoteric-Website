@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         <meta charset="UTF-8">
         <title>Esoteric Emporium</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main_page.css">
+        <link rel="stylesheet" href="css/cart_page.css">
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     </head>
     <body>
@@ -38,10 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         </nav>
         <br><br><br><br><br>
         <a href="ProductPage.php" class="back">Back To Shopping</a>
+        <section id="feature-content">
         <br><br>
-        <form method="post">
-            <input type="submit" id="submit" name="0" value="Empty Cart">
-        </form>
         <?php
         //dynamically display a list of items in the cart
         $total = 0;
@@ -71,12 +69,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         if($cart->GetItems() != [])
         {
         ?>
+        </section>
+        <div class="selection">
+        <form method="post">
+            <input type="submit" id="submit" name="0" value="Empty Cart">
+        </form>
             <a href="ShippingPage.php"><input type="button" value="Proceed to Purchase"></a>
         <?php
         }
 
         ?>
+        </div>
         <br><br>
+
         <a href="ProductPage.php" class="back">Back To Shopping</a>
    </body>
 </html>

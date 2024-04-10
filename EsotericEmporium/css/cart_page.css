@@ -1,0 +1,263 @@
+/**
+General rules
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+/** -------------Nav Panel------------- */
+
+.navbar{
+    background-image: url(../img/fire.gif);
+    background-position: bottom;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navbar ul{
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    text-align: left;
+}
+
+.navbar ul a{
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.navbar a:hover{
+    background-color: #ffffff;
+}
+
+.navbar .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.navbar .menu-icon{
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+    position: relative;
+    user-select: none;
+}
+
+.navbar .menu-icon .nav-icon{
+    background-color: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+.navbar .menu-icon .nav-icon::before, .navbar .menu-icon .nav-icon::after{
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.navbar .menu-icon .nav-icon:before{
+    top: 5px;
+}
+
+.navbar .menu-icon .nav-icon:after{
+    top: -5px;
+}
+
+.navbar .menu-btn{
+    display: none;
+}
+
+.navbar i {
+    /**color: #000000;*/
+    margin-top: 23px;
+}
+
+.navbar li {
+    padding-right: 300px;
+}
+
+    /** Animation */
+
+.navbar .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::before{
+    transform: rotate(-45);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon .nav-icon::after{
+    transform: rotate(45);
+}
+
+.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .nav-icon:before, .navbar .menu-btn:checked ~ .menu-icon:not(.steps) .nav-icon:after{
+    top: 0;
+}
+
+@media screen and ( min-width: 685px) {
+    .navbar{
+        padding: 5px 10px;
+    }
+
+    .navbar ul, .navbar:hover ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .navbar ul a{
+        width: 100px;
+        padding: 10px 10px;
+    }
+
+    .navbar a:hover{
+        background-color: transparent;
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .navbar a:visited{
+        background-color: transparent;
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    .navbar i:hover{
+        color: #ffffff
+    }
+
+    .navbar .menu{
+        max-height: 30px;
+    }
+
+    .menu-btn, .menu-icon{
+        display: none;
+    }
+}
+
+/** ----------Content------------ */
+#head{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    transition: padding .2s ease-out;
+}
+
+#head div img{
+    max-width: 50%;
+    height: auto;
+}
+
+#head h1{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    padding-top: 10px;
+}
+
+p{
+    text-align: center;
+}
+
+table, th, td{
+    border: 1px solid;
+}
+
+td img{
+    object-fit: cover;
+}
+
+table{
+    width: 85%
+}
+
+#feature-content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+div{
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    padding: 10px;
+}
+
+#feature-content .img img{
+    max-width: 50%;
+    height: auto;
+}
+
+a.back:link {
+    color:aquamarine
+}
+
+a.back:visited {
+    color:aquamarine
+}
+
+a.back:hover {
+    color: blue;
+}
+
+a.back:active {
+    color: aliceblue;
+}
+
+
+@media screen and ( min-width:820px) {
+    #head{
+        display: flex;
+
+        padding: 10px;
+        padding-top: 50px;
+    }
+
+    #head h1{
+        padding-top: 70px;
+        padding-left: 20px;
+        font-size: xx-large;
+    }
+
+    #head div img{
+        max-width:90%;
+        display: flex;
+    }
+}

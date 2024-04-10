@@ -38,7 +38,7 @@ body{
 }
 
 .navbar a:hover{
-    background-color: #056893;
+    background-color: #ffffff;
 }
 
 .navbar .menu{
@@ -179,6 +179,9 @@ body{
     padding-top: 10px;
 }
 
+p{
+    text-align: center;
+}
 
 #feature-content{
     display: flex;
