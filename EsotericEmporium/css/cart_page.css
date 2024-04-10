@@ -187,8 +187,12 @@ table, th, td{
     border: 1px solid;
 }
 
-td img{
-    object-fit: cover;
+td.img{
+    width: 1%;
+}
+
+td.text{
+    padding: 10px;
 }
 
 table{
@@ -218,11 +222,6 @@ div{
     vertical-align: middle;
     align-items: center;
     padding: 10px;
-}
-
-#feature-content .img img{
-    max-width: 50%;
-    height: auto;
 }
 
 a.back:link {

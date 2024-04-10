@@ -49,14 +49,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             ?>
                 <table>
                     <tr>
-                        <td rowspan="4"> <?= $item->getImage(200) ?> </td>
-                        <td> <b> <?= $item->getItemName() ?> </b> </td>
+                        <td rowspan="4" class="img"> <?= $item->getImage(200) ?> </td>
+                        <td class="text"> <b> <?= $item->getItemName() ?> </b> </td>
                     </tr>
                     <tr>
-                        <td> <?= "$" . number_format($item->getItemPrice(), 2) ?> </td>
+                        <td class="text"> <?= "$" . number_format($item->getItemPrice(), 2) ?> </td>
                     </tr>
                     <tr>
-                        <td> <?= $item->getItemDescription() ?> </td>
+                        <td class="text"> <?= $item->getItemDescription() ?> </td>
                     </tr>
                 </table>
             <?php

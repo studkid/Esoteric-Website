@@ -187,8 +187,12 @@ table, th, td{
     border: 1px solid;
 }
 
+td.img{
+    width: 100px;
+}
+
 td img{
-    object-fit: cover;
+    min-width: 100%;
 }
 
 table{

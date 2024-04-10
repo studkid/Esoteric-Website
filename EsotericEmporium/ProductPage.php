@@ -149,7 +149,7 @@ $items = $statement->fetchAll();
                         <td>
                              <p> <?= htmlspecialchars("$" . $item->getItemPrice(), ENT_QUOTES, 'UTF-8', false); ?> </p>
                         </td>
-                        <td>
+                        <td class="img">
                             <?= $item->getImage(100) ?>
                         </td>
                         <td> 
