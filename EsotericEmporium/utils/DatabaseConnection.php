@@ -8,8 +8,8 @@ class DatabaseConnection
     protected $port = 3306;
     protected $charset = "utf8mb4";
 
-    protected $username = "user";
-    protected $password = "Password123$";
+    protected $username = "root";
+    protected $password = "";
 
     protected $options = [
         \PDO::ATTR_ERRMODE               => \PDO::ERRMODE_EXCEPTION,

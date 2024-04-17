@@ -69,15 +69,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         if($cart->GetItems() != [])
         {
         ?>
-        </section>
-        <div class="selection">
-        <form method="post">
-            <input type="submit" id="submit" name="0" value="Empty Cart">
-        </form>
+            </section>
+            <div class="selection">
+            <form method="post">
+                <input type="submit" id="submit" name="0" value="Empty Cart">
+            </form>
             <a href="ShippingPage.php"><input type="button" value="Proceed to Purchase"></a>
         <?php
         }
-
         ?>
         </div>
         <br><br>

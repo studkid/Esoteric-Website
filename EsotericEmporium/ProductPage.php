@@ -20,6 +20,13 @@ if(!$currentUserData)
     exit;
 }
 
+//if the current user is an admin, send them to the admin item page
+if($currentUserData["role"] == "Administrator")
+{
+    header("Location: AdminItemPage.php");
+    exit;
+}
+
 //if theres a cart in the session, grab that. otherwise, make a new cart object
 $cart = $_SESSION['cart'] ?? new Cart();
 
@@ -124,7 +131,6 @@ $items = $statement->fetchAll();
 
         
         <table>
-        <th> ITEM ID </th>
         <th> NAME </th>
         <th> DESCRIPTION </th>
         <th> PRICE </th>
@@ -137,9 +143,6 @@ $items = $statement->fetchAll();
                 {
                 ?>
                     <tr>
-                        <td>
-                             <p> <?= htmlspecialchars($item->getItemID(), ENT_QUOTES, 'UTF-8', false); ?> </p>
-                        </td>
                         <td>
                              <p> <?= htmlspecialchars($item->getItemName(), ENT_QUOTES, 'UTF-8', false); ?> </p>
                         </td>

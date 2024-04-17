@@ -26,6 +26,17 @@ $cart = $_SESSION['cart'] ?? new Cart();
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     echo("items purchased");
+
+    $purchasedItems = $cart->GetItems();
+
+    foreach($purchasedItems as $item)
+    {
+        $id = $item->getItemID();
+        $name = $currentUserData["username"];
+        $address = $_POST["address"] . ", " . $_POST["city"] . ", " . $_POST["state"] . " " . $_POST["zip"];
+        $pdo->query( "INSERT INTO Purchase (itemID, purchaserName, purchaserAddress, purchaseDate) VALUES ($id, '$name', '$address', CURRENT_TIMESTAMP);");
+    }
+
     $cart->EmptyCart($pdo, false);
     header("Location: ConfirmationPage.php");
     exit;

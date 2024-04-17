@@ -6,8 +6,8 @@ $database = "esotericemporium"; //database name
 $port = 3306;
 $charset = "utf8mb4";
 
-$username = "user";
-$password = "Password123$";
+$username = "root";
+$password = "";
 
 $options = [
     PDO::ATTR_ERRMODE               => PDO::ERRMODE_EXCEPTION,
