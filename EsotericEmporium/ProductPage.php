@@ -131,9 +131,9 @@ $items = $statement->fetchAll();
 
         
         <table>
-        <th> NAME </th>
-        <th> DESCRIPTION </th>
-        <th> PRICE </th>
+        <!--<th> NAME </th>-->
+        <!--<th> DESCRIPTION </th>-->
+        <!--<th> PRICE </th>-->
         <?php
             //dynamically display a list of all items in stock
             foreach($items as $item)
@@ -144,7 +144,7 @@ $items = $statement->fetchAll();
                 ?>
                     <tr>
                         <td>
-                             <p> <?= htmlspecialchars($item->getItemName(), ENT_QUOTES, 'UTF-8', false); ?> </p>
+                             <p> <b> <?= htmlspecialchars($item->getItemName(), ENT_QUOTES, 'UTF-8', false); ?> </b> </p>
                         </td>
                         <td>
                              <p> <?= htmlspecialchars($item->getItemDescription(), ENT_QUOTES, 'UTF-8', false); ?> </p>
