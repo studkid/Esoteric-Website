@@ -111,6 +111,7 @@ $items = $statement->fetchAll();
 
         <section id="head">
         <form action="ProductPage.php" method="POST">
+            <br><br>
             <h2> <?= "Hello, " . $currentUserData["role"] . " \"" . $currentUserData["username"] . "\"!" ?> </h2>
             <input type="submit" name="LogoutUser" value="Logout"/>
             <a href="CartPage.php"><input type="button" value="My Cart"></a>
