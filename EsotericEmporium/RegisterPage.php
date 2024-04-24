@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <link rel="stylesheet" href="css/login_page.css">
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
     </head>
-    <body>
+    <body id="head">
         <h2>Register</h2>
         <form action="RegisterPage.php" method="POST">
             <table>
