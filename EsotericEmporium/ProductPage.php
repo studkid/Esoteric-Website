@@ -145,21 +145,28 @@ $items = $statement->fetchAll();
                 ?>
                     <tr>
                         <td>
-                             <p> <b> <?= htmlspecialchars($item->getItemName(), ENT_QUOTES, 'UTF-8', false); ?> </b> </p>
+                             <p> <h2> <?= htmlspecialchars($item->getItemName(), ENT_QUOTES, 'UTF-8', false); ?> </h2> </p>
                         </td>
                         <td>
-                             <p> <?= htmlspecialchars($item->getItemDescription(), ENT_QUOTES, 'UTF-8', false); ?> </p>
+                             <p> <b> <?= htmlspecialchars("$" . $item->getItemPrice(), ENT_QUOTES, 'UTF-8', false); ?> </b> </p>
                         </td>
-                        <td>
-                             <p> <?= htmlspecialchars("$" . $item->getItemPrice(), ENT_QUOTES, 'UTF-8', false); ?> </p>
-                        </td>
-                        <td class="img">
+                        <td class="img" rowspan="2">
                             <?= $item->getImage(100) ?>
                         </td>
-                        <td> 
+                        <td rowspan="2"> 
                             <p><form method = "POST">
                                 <input type="submit" id="submit" name=<?= $item->getItemID() ?> value="Add to Cart">
                             </form> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p> <?= htmlspecialchars($item->getItemDescription(), ENT_QUOTES, 'UTF-8', false); ?> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <p>  <br> </p>
                         </td>
                     </tr>
                 <?php
