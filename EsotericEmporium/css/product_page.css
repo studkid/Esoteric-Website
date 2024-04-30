@@ -196,7 +196,8 @@ td img{
 }
 
 table{
-    width: 85%
+    min-width: 60%;
+    max-width: 600px;
 }
 
 #feature-content{
@@ -230,6 +231,19 @@ a.back:hover {
 a.back:active {
     color: aliceblue;
 }
+
+
+#submit {
+    background-color: #04AA6D; 
+    border: none;
+    color: white;
+    padding: 30px 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 
 
 @media screen and ( min-width:820px) {
