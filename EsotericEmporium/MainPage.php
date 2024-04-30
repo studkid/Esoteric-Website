@@ -53,7 +53,7 @@ $cart = $_SESSION['cart'] ?? new Cart();
     <section id="feature-content">
         <div class="img">
             <img src="img/logo.png">
-            <h2>[Insert some cool quality content here]</h2>
+            <h2>[Gateway to the Extraordinary]</h2>
         </div>
     </section>
     </section>

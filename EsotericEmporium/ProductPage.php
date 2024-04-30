@@ -157,9 +157,9 @@ $items = $statement->fetchAll();
                             <?= $item->getImage(100) ?>
                         </td>
                         <td> 
-                            <form method = "POST">
+                            <p><form method = "POST">
                                 <input type="submit" id="submit" name=<?= $item->getItemID() ?> value="Add to Cart">
-                            </form> 
+                            </form> </p>
                         </td>
                     </tr>
                 <?php

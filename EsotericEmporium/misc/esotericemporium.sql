@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2024 at 01:06 PM
+-- Generation Time: Apr 30, 2024 at 03:24 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `esotericemporium` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `esotericemporium`;
+
+DROP TABLE IF EXISTS `purchase`;
 
 -- --------------------------------------------------------
 
@@ -44,7 +46,8 @@ CREATE TABLE `eeuser` (
 INSERT INTO `eeuser` (`userID`, `username`, `password`, `role`) VALUES
 (2, 'Joe', '00UTZBLXnAHkQ', 'User'),
 (3, 'Bill', '00fc0tjjiQvDg', 'User'),
-(6, 'admin', '00SLi00eTJrV2', 'Administrator');
+(6, 'admin', '00SLi00eTJrV2', 'Administrator'),
+(7, 'test', '00hzYw5m.HyAY', 'User');
 
 -- --------------------------------------------------------
 
@@ -70,7 +73,21 @@ INSERT INTO `item` (`itemID`, `itemName`, `itemDescription`, `itemImageName`, `i
 (1, 'Test Item', 'This is a useless test item. Do not buy.', NULL, 19.99, 0),
 (2, 'Levitating Paperweight', 'Hovers above your paperwork.', 'paperweight.jpg', 79.99, 0),
 (3, 'Deluxe Skeleton Key', 'A key that opens doors by breaking them down.', 'skeletonKey.jpg', 119.99, 0),
-(4, 'Gandalf', ' gandalf', 'gandalf.jpg', 4.99, 0);
+(4, 'Gandalf', ' gandalf', 'gandalf.jpg', 4.99, 0),
+(18082, 'Shutterstock Camera', 'Takes pictures with stock image watermarks.', 'shutterstock.jpg', 59.99, 0),
+(18208, 'Forbidden Drink', 'Monster energy + melatonin.', 'monster.jpg', 8.99, 0),
+(21700, 'Emotional Roomba', 'It can feel pain.', 'roomba.jpg', 299.99, 0),
+(24150, 'Telepathic Teapot', 'It can read your mind.', 'teapot.jpg', 219.99, 0),
+(35047, 'Mid-Life Crisis in a Bottle', 'Mid-Life Crisis in a Bottle', 'crisis.jpg', 19.99, 0),
+(42552, 'Spoiled Milk', 'It speaks Latin.', 'milk.jpg', 17.99, 0),
+(46799, 'Time-Traveling Umbrella', 'For when it was raining yesterday.', 'umbrella.jpg', 123.99, 0),
+(69630, 'Fun Bowling Ball', 'Heat-seeking bowling ball.', 'bowling.jpg', 99.99, 0),
+(69696, 'Sony Vegas', 'A pirated copy of Sony Vegas.', 'vegas.jpg', 149.99, 0),
+(72818, 'Self-Punching Gloves', 'Why are you hitting yourself? Why are you hitting yourself?', 'boxing.jpg', 13.99, 0),
+(73002, 'Flying Saucer Blueprints', 'Fun DIY activity.', 'blueprint.jpg', 9999999.99, 0),
+(81188, 'All Spaghetti', 'All of the spaghetti ever.', 'spaghetti.jpg', 599.99, 0),
+(91890, 'Launch Codes', 'Russian nuclear launch codes for armchair strategists.', 'launch.jpg', 3.99, 0),
+(98667, 'Sleep Alarm', 'An alarm clock that makes you drowsy.', 'alarm.jpg', 28.99, 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +95,7 @@ INSERT INTO `item` (`itemID`, `itemName`, `itemDescription`, `itemImageName`, `i
 -- Table structure for table `purchase`
 --
 
-DROP TABLE IF EXISTS `purchase`;
+
 CREATE TABLE `purchase` (
   `purchaseID` int(11) NOT NULL,
   `itemID` int(11) NOT NULL,
@@ -117,13 +134,13 @@ ALTER TABLE `purchase`
 -- AUTO_INCREMENT for table `eeuser`
 --
 ALTER TABLE `eeuser`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `itemID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21282;
+  MODIFY `itemID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98668;
 
 --
 -- AUTO_INCREMENT for table `purchase`
